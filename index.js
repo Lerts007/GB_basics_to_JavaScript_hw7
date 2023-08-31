@@ -8,6 +8,12 @@
 console.log("--------------------------------------------------------------------");
 console.log("Задание 1");
 console.log("--------------------------------------------------------------------");
+
+const dropdownItem = document.querySelectorAll(".dropdown-item");
+dropdownItem.forEach((el) => {
+  el.classList.add("super-dropdown");
+  console.log(el);
+});
 // --------------------------------------------------------------------
 // Задание 2
 
@@ -18,6 +24,12 @@ console.log("-------------------------------------------------------------------
 console.log("--------------------------------------------------------------------");
 console.log("Задание 2");
 console.log("--------------------------------------------------------------------");
+
+const btn = document.querySelectorAll(".btn");
+btn.forEach((el) => {
+  if (!el.classList.contains("btn-secondary")) el.classList.add("btn-secondary");
+  else el.classList.remove("btn-secondary");
+});
 
 // --------------------------------------------------------------------
 // Задание 3
@@ -30,6 +42,11 @@ console.log("-------------------------------------------------------------------
 console.log("Задание 3");
 console.log("--------------------------------------------------------------------");
 
+const menu = document.querySelectorAll(".menu");
+menu.forEach((el) => {
+  if (el.classList.contains("dropdown-menu")) el.classList.remove("dropdown-menu");
+});
+
 // --------------------------------------------------------------------
 // Задание 4
 
@@ -41,6 +58,9 @@ console.log("-------------------------------------------------------------------
 console.log("Задание 4");
 console.log("--------------------------------------------------------------------");
 
+const dropdown = document.querySelectorAll(".dropdown");
+dropdown[1].insertAdjacentHTML("beforeend", '<a href="#">link</a>');
+
 // --------------------------------------------------------------------
 // Задание 5
 
@@ -50,6 +70,9 @@ console.log("-------------------------------------------------------------------
 console.log("--------------------------------------------------------------------");
 console.log("Задание 5");
 console.log("--------------------------------------------------------------------");
+
+const dropdownMenuButton = document.querySelector("#dropdownMenuButton");
+dropdownMenuButton.id = "superDropdown";
 
 // --------------------------------------------------------------------
 // Задание 6
@@ -62,6 +85,14 @@ console.log("-------------------------------------------------------------------
 console.log("Задание 6");
 console.log("--------------------------------------------------------------------");
 
+const ariaLabelledby = document.querySelectorAll(
+  '[aria-labelledby = "dropdownMenuButton"]'
+);
+
+ariaLabelledby.forEach((el) => {
+  el.dataset.dd = 3;
+});
+
 // --------------------------------------------------------------------
 // Задание 7
 
@@ -71,4 +102,10 @@ console.log("-------------------------------------------------------------------
 console.log("--------------------------------------------------------------------");
 console.log("Задание 7");
 console.log("--------------------------------------------------------------------");
+
+const dropdownToggle = document.querySelectorAll(".dropdown-toggle");
+
+dropdownToggle.forEach((el) => {
+  el.removeAttribute("type");
+});
 // --------------------------------------------------------------------
