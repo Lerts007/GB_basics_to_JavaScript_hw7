@@ -27,8 +27,8 @@ console.log("-------------------------------------------------------------------
 
 const btn = document.querySelectorAll(".btn");
 btn.forEach((el) => {
-  if (!el.classList.contains("btn-secondary")) el.classList.add("btn-secondary");
-  else el.classList.remove("btn-secondary");
+  el.classList.toggle("btn-secondary");
+  console.log(el);
 });
 
 // --------------------------------------------------------------------
@@ -85,9 +85,7 @@ console.log("-------------------------------------------------------------------
 console.log("Задание 6");
 console.log("--------------------------------------------------------------------");
 
-const ariaLabelledby = document.querySelectorAll(
-  '[aria-labelledby = "dropdownMenuButton"]'
-);
+const ariaLabelledby = document.querySelectorAll('[aria-labelledby = "dropdownMenuButton"]');
 
 ariaLabelledby.forEach((el) => {
   el.dataset.dd = 3;
